@@ -74,3 +74,6 @@
       ```bash
       npm start
       ```
+
+### other comments:
+go to the file 'knic-engine/knic/engine_config.py', in line 6, change experiment parameter from 'LINEAR_4' to 'TAC_ICT_4', making sure we use the same experiment. 
