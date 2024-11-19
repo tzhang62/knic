@@ -6,7 +6,14 @@
   bash Miniconda3-latest-MacOSX-arm64.sh
   conda init
   ```
-### 2. install knic engine (basically follow the knic engine readme file : https://github.com/usc-isi-i2/knic-engine)
+### 2. git clone all github repos on your computer
+  ```bash
+  git clone git@github.com:usc-isi-i2/knic-notebooks.git
+  git clone git@github.com:usc-isi-i2/knic-jupyter.git
+  git clone git@github.com:usc-isi-i2/knic-engine.git
+  git clone git@github.com:usc-isi-i2/knic-companion.git
+  ```
+### 3. install knic engine (basically follow the knic engine readme file : https://github.com/usc-isi-i2/knic-engine)
 #### Create knic-engine virtual environment:
     ```bash
     conda create -n knic-engine python=3.10
@@ -23,8 +30,8 @@
     docker pull rabbitmq:3.12.13-management-alpine
     docker run --detach --rm --name knic-rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.12.13-management-alpine
 
-### 3.install knic companion
-#### 3.1 install api  
+### 4.install knic companion
+#### 4.1 install api  
 ##### create a conda environment:
     ```bash
     conda create --name knic-companion python=3.9.18
@@ -40,12 +47,12 @@
     mkdir -p mongo_dbpath
     mongod --dbpath mongo_dbpath
     ```
-#### 3.2 install app 
+#### 4.2 install app 
     ``` bash
     npm install
     ```
 
-### 4.install knic jupyter
+### 5.install knic jupyter
     ```bash
     git clone git@github.com:usc-isi-i2/knic-jupyter.git
     cd knic-jupyter
@@ -53,7 +60,7 @@
     conda activate knic-jupyter
     ```
 
-### 5. finally run 5 command lines at the same time (should be run in 5 different terminals)
+### 6. finally run 5 command lines at the same time (should be run in 5 different terminals)
 #### 1. RUN mongo db:
       ```bash
       mongod --dbpath mongo_dbpath
