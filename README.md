@@ -70,7 +70,7 @@
       ```bash
       python knic_application.py
       ```
-#### 5. RUN the companion api server
+#### 5. RUN the companion app server
       ```bash
       npm start
       ```
