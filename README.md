@@ -58,6 +58,8 @@
     cd knic-jupyter
     conda create --name knic-jupyter python=3.8 -y
     conda activate knic-jupyter
+    pip install -ve .
+    export KNIC_COMPANION=http://localhost:3000
     ```
 
 ### 6. finally run 5 command lines at the same time (should be run in 5 different terminals)
