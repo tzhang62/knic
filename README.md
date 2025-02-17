@@ -73,10 +73,13 @@
       ```
 #### 3. RUN knic jupyter
       ```bash
+      unset HOST
+      export KNIC_COMPANION=http://localhost:3000
       ../knic-engine/knic-jupyter/run-jupyter-lab.sh
       ```
 #### 4. RUN knic_engine:
       ```bash
+      go to the file 'knic-engine/knic/engine_config.py', in line 6, change experiment parameter from 'LINEAR_4' to 'ICT_5'. In the file, reset TAD_LLM_API_KEY (line 64). 
       python knic_application.py
       ```
 #### 5. RUN the companion app server
@@ -85,4 +88,4 @@
       ```
 
 ### other comments:
-go to the file 'knic-engine/knic/engine_config.py', in line 6, change experiment parameter from 'LINEAR_4' to 'TAC_ICT_4', making sure we use the same experiment. 
+go to the file 'knic-engine/knic/engine_config.py', in line 6, change experiment parameter from 'LINEAR_4' to 'ICT_5', making sure we use the same experiment. 
