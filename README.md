@@ -22,13 +22,15 @@
 #### Docker:
     ```bash
     docker build --tag ghcr.io/usc-isi-i2/knic-engine .
+    ```
+    Optional:
     docker compose up --detach
     docker compose down
-    ```
 #### Running RabbitMQ Docker
     ```bash
     docker pull rabbitmq:3.12.13-management-alpine
     docker run --detach --rm --name knic-rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.12.13-management-alpine
+    ```
 
 ### 4.install knic companion
 #### 4.1 install api  
