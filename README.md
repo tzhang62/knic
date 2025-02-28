@@ -65,16 +65,21 @@
     ```
 
 ### 6. finally run 5 command lines at the same time (should be run in 5 different terminals)
+###### Before running each command, make sure to activate corresponding conda environment. The command is: conda activate your-env-name
 #### 1. RUN mongo db:
       ```bash
+      cd knic-companion/api/
+      conda activate knic-companion
       mongod --dbpath mongo_dbpath
       ```
 #### 2. RUN the companion api server:
       ```bash
+      conda activate knic-companion
       python server.py
       ```
 #### 3. RUN knic jupyter
       ```bash
+      conda activate knic-jupyter
       unset HOST
       export KNIC_COMPANION=http://localhost:3000
       ../knic-engine/knic-jupyter/run-jupyter-lab.sh
@@ -83,10 +88,12 @@
       ```bash
       go to the file 'knic-engine/knic/engine_config.py', in line 6, change experiment parameter from 'LINEAR_4' to 'ICT_5' (line 12). 
       In the file, reset TAD_LLM_API_KEY (line 64). 
+      conda activate knic-engine
       python knic_application.py
       ```
 #### 5. RUN the companion app server
       ```bash
+      conda activate knic-companion
       npm start
       ```
 
