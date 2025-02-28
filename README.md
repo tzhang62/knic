@@ -65,7 +65,7 @@
     ```
 
 ### 6. finally run 5 command lines at the same time (should be run in 5 different terminals)
-###### Before running each command, make sure to activate corresponding conda environment. The command is: conda activate your-env-name
+###### Before running each command, making sure to activate corresponding conda environment. The command is: conda activate your-env-name
 #### 1. RUN mongo db:
       ```bash
       cd knic-companion/api/
