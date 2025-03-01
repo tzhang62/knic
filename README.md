@@ -74,15 +74,17 @@
       ```
 #### 2. RUN the companion api server:
       ```bash
+      cd knic-companion/api/
       conda activate knic-companion
       python server.py
       ```
 #### 3. RUN knic jupyter
       ```bash
+      cd knic-juypter
       conda activate knic-jupyter
       unset HOST
       export KNIC_COMPANION=http://localhost:3000
-      ../knic-engine/knic-jupyter/run-jupyter-lab.sh
+      sh run-jupyter-lab.sh
       ```
 #### 4. RUN knic_engine:
       ```bash
@@ -93,6 +95,7 @@
       ```
 #### 5. RUN the companion app server
       ```bash
+      cd knic-companion/app/
       conda activate knic-companion
       npm start
       ```
