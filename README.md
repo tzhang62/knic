@@ -1,11 +1,11 @@
 
 # Knic Installation
-### 1. install minconda on your computer (for mac M1/M2)
-  ```bash
+### 1. install miniconda on your computer (for mac M1/M2)
+  
   curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh
   bash Miniconda3-latest-MacOSX-arm64.sh
   conda init
-  ```
+  
 ### 2. git clone all github repos on your computer
   ```bash
   git clone git@github.com:usc-isi-i2/knic-notebooks.git
