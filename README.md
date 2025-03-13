@@ -18,6 +18,8 @@
     ```bash
     conda create -n knic-engine python=3.10
     conda activate knic-engine
+    go to the file 'knic-engine/knic/engine_config.py', change experiment parameter from 'LINEAR_4' to 'ICT_5' (line 12). 
+     In the file, reset TAD_LLM_API_KEY (line 64). 
     ```
 #### Docker:
     ```bash
@@ -88,8 +90,6 @@
       ```
 #### 4. RUN knic_engine:
       ```bash
-      go to the file 'knic-engine/knic/engine_config.py', in line 6, change experiment parameter from 'LINEAR_4' to 'ICT_5' (line 12). 
-      In the file, reset TAD_LLM_API_KEY (line 64). 
       conda activate knic-engine
       python knic_application.py
       ```
