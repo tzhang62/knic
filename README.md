@@ -20,7 +20,7 @@
     conda create -n knic-engine python=3.10
     conda activate knic-engine
     go to the file 'knic-engine/knic/engine_config.py', change experiment parameter from 'LINEAR_4' to 'ICT_5' (line 12). 
-     In the file, reset TAD_LLM_API_KEY (line 64). 
+    In the file, reset TAD_LLM_API_KEY (line 64). 
     
 #### Docker:
     
@@ -89,15 +89,22 @@
       export KNIC_COMPANION=http://localhost:3000
       sh run-jupyter-lab.sh
       
-#### 4. RUN knic_engine:
+#### 4. Running the RabbitMQ Docker
+      cd knic-engine
+      docker run --detach --rm --name knic-rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.12.13-management-alpine
+###### Note: Can continue running the step 5 on this terminal   
+
+#### 5. RUN knic_engine:
       
       conda activate knic-engine
+      export KNIC_COMPANION=http://localhost:3000
       python knic_application.py
       
-#### 5. RUN the companion app server
+#### 6. RUN the companion app server
       
       cd knic-companion/app/
       conda activate knic-companion
+      export KNIC_COMPANION=http://localhost:3000
       npm start
       
 
