@@ -1,19 +1,19 @@
 
 # Knic Installation
 ### 1. install miniconda on your computer (for mac M1/M2)
-  
+  ```
   curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh
   bash Miniconda3-latest-MacOSX-arm64.sh
   conda init
-  
+  ```
   
 ### 2. git clone all github repos on your computer
-  
+  ```
   git clone git@github.com:usc-isi-i2/knic-notebooks.git
   git clone git@github.com:usc-isi-i2/knic-jupyter.git
   git clone git@github.com:usc-isi-i2/knic-engine.git
   git clone git@github.com:usc-isi-i2/knic-companion.git
-  
+  ```
 ### 3. install knic engine (basically follow the knic engine readme file : https://github.com/usc-isi-i2/knic-engine)
 #### Create knic-engine virtual environment:
     
