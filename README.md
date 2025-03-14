@@ -25,10 +25,10 @@
 #### Docker:
     ```
     docker build --tag ghcr.io/usc-isi-i2/knic-engine .
-    ```
     Optional:
     docker compose up --detach
     docker compose down
+    ```
 #### Running RabbitMQ Docker
     ```
     docker pull rabbitmq:3.12.13-management-alpine
