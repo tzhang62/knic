@@ -92,7 +92,7 @@
 #### 4. Running the RabbitMQ Docker
       cd knic-engine
       docker run --detach --rm --name knic-rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.12.13-management-alpine
-###### Note: Can continue running the step 5 on this terminal   
+###### Note: Can continue running the step 5 in this terminal   
 
 #### 5. RUN knic_engine:
       
