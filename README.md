@@ -38,68 +38,68 @@
 ### 4.install knic companion
 #### 4.1 install api  
 ##### create a conda environment:
-    ```
+    
     conda create --name knic-companion python=3.9.18
     conda activate knic-companion
-    ```
+    
 ##### install project requirements: 
-    ```
+    
     pip install -r requirements.txt -c constraints.txt
     conda install -c anaconda mongodb
-    ```
+    
 ##### start mongodb
-    ```
+    
     mkdir -p mongo_dbpath
     mongod --dbpath mongo_dbpath
-    ```
+    
 #### 4.2 install app 
-    ```
+    
     npm install
-    ```
+    
 
 ### 5.install knic jupyter
-    ```
+    
     git clone git@github.com:usc-isi-i2/knic-jupyter.git
     cd knic-jupyter
     conda create --name knic-jupyter python=3.8 -y
     conda activate knic-jupyter
     pip install -ve .
     export KNIC_COMPANION=http://localhost:3000
-    ```
+    
 
 ### 6. finally run 5 command lines at the same time (should be run in 5 different terminals)
 ###### Before running each command, making sure to activate corresponding conda environment. The command is: conda activate your-env-name
 #### 1. RUN mongo db:
-      ```
+      
       cd knic-companion/api/
       conda activate knic-companion
       mongod --dbpath mongo_dbpath
-      ```
+      
 #### 2. RUN the companion api server:
-      ```
+      
       cd knic-companion/api/
       conda activate knic-companion
       python server.py
-      ```
+      
 #### 3. RUN knic jupyter
-      ```
+      
       cd knic-juypter
       conda activate knic-jupyter
       unset HOST
       export KNIC_COMPANION=http://localhost:3000
       sh run-jupyter-lab.sh
-      ```
+      
 #### 4. RUN knic_engine:
-      ```
+      
       conda activate knic-engine
       python knic_application.py
-      ```
+      
 #### 5. RUN the companion app server
-      ```
+      
       cd knic-companion/app/
       conda activate knic-companion
       npm start
-      ```
+      
 
 ### other comments:
 go to the file 'knic-engine/knic/engine_config.py', in line 6, change experiment parameter from 'LINEAR_4' to 'ICT_5', making sure we use the same experiment. 
