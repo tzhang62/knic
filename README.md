@@ -79,6 +79,8 @@
       
       cd knic-companion/api/
       conda activate knic-companion
+      unset HOST
+      export KNIC_COMPANION=http://localhost:3000
       python server.py
       
 #### 3. RUN knic jupyter
