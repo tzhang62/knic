@@ -85,7 +85,7 @@
       
 #### 3. RUN knic jupyter
       
-      cd knic-juypter
+      cd knic-jupyter
       conda activate knic-jupyter
       unset HOST
       export KNIC_COMPANION=http://localhost:3000
